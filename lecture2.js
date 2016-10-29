@@ -2,11 +2,16 @@
  * 1. explain the special meaning of the following special characters
  \0 the null character
  \n new line
+ It is used to find a newline character and returns the position where the newline character was found. If no match is found, it returns -1.
  \r carriage return
- \v vertical tab
- \t
- \backspace
- \f form feed
+ It is used to find a carriage return character and returns the position where the carriage return character was found. If no match is found, it returns -1.
+ \v vertical tab 
+ It's used to find a vertical tab character and returns the position where the vertical tab character was found. If no match is found, it returns -1.
+ \t It is used to find a tab character and returns the position where the tab character was found. If no match is found, it returns -1.
+ \backspace 
+ Creates space in between strings that have that have grammatical punctuations that interfere with quotes for strings in a variable. 
+ \f form feed 
+ It's used to find a form feed character and returns the position where the form feed character was found. If no match is found, it returns -1.
  */
 
 /*
@@ -79,9 +84,15 @@ console.log(arr.slice(2,6))
  *   function addTwoNumber (num1, num2) {
  *     return num1 + num2;
  *   }
- *
- *   and invoke the function expression to caluate the result of 256 + 532
+ * and invoke the function expression to caluate the result of 256 + 532
  */
+var num1 = 256;
+var num2 = 536;
+ function addTwoNumber (num1, num2) {
+    return num1 + num2;    
+ }
+addTwoNUmber();
+
 
 /*
  * 11. create an immediately invoked function expression
@@ -145,4 +156,17 @@ console.log(arr.slice(2,6))
  *
  *     please write a function to change the first letter of every word to upper case.
  */
+var str = 'Training, mentoring, and investing in world-class tech entrepreneurs in Africa.'
+function titleCase(str) {
+ var splitStr = str.toUpperCase().split(' ');
+ for (var i = 0; i < splitStr.length; i++) {
+   if (splitStr.length[i] < splitStr.length) {
+     splitStr[i].charAt(0).toUpperCase();     
+   }
+      str = splitStr.join(' '); 
+ }
+return str;
+}
+
+titleCase();
 Contact GitHub 
