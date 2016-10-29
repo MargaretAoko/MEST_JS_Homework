@@ -157,16 +157,16 @@ addTwoNUmber();
  *     please write a function to change the first letter of every word to upper case.
  */
 var str = 'Training, mentoring, and investing in world-class tech entrepreneurs in Africa.'
-function titleCase(str) {
- var splitStr = str.toUpperCase().split(' ');
- for (var i = 0; i < splitStr.length; i++) {
-   if (splitStr.length[i] < splitStr.length) {
-     splitStr[i].charAt(0).toUpperCase();     
-   }
-      str = splitStr.join(' '); 
- }
-return str;
-}
+function titleCase(str) {  
+  str = str.toLowerCase().split(' ');
 
-titleCase();
+  for(var i = 0; i < str.length; i++){
+    str[i] = str[i].split('');
+    str[i][0] = str[i][0].toUpperCase(); 
+    str[i] = str[i].join('');
+  }
+  return str.join(' ');
+}
+titleCase("I'm a little tea pot");
+
 Contact GitHub 
