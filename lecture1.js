@@ -16,8 +16,9 @@ var greeting = "It's nice to me you today";
 var response = "Ashwin said, "Yes Sir!"";//As much as you may want to consider grammar javascripts detects the how you use your quotes to when writing strings. For this case it will only excute "Ashwin," because the string is closed there. In order to excute the whole string this how to write it. var response = "Ashwin said, Yes Sir!";
 var response = 'Aswin said, "Yes Sir"';
 /*
- * 3. Try 0.3 + 0.1 === 0.4, explain what happen here // Checks if both side are equale to each other.
+ * 3. Try 0.3 + 0.1 === 0.4, explain what happen here // 
  */
+Checks if both side are equal to each other.
 
 
 /*
@@ -33,10 +34,44 @@ function () pizza = {
  *  5. Build a Animal object by using object constructor function, and add at least two method to prototype,
  *     create two animals from it.
  */
+  function Animal(name) {
+  this.name = name
+  this.run = function() {
+    console.log("running "+this.name);
+  }
+}
+var animal = new Animal('Rat');
+animal.run()
 
 /*
- * 6. Write a small menu selection function by using if-else and switch, input number, output name of your order
+ * 6. Write a small menu selection function by using if-else and switch, input number, output name of your order 
  */
+var fruit;
+switch (new Date().getDay()) {
+    case 0:
+        fruit = "Sunday";
+        break;
+    case 1:
+        fruit = "Monday";
+        break;
+    case 2:
+       fruit = "Tuesday";
+        break;
+    case 3:
+       fruit = "Wednesday";
+        break;
+    case 4:
+        fruit = "Thursday";
+        break;
+    case 5:
+       fruit = "Friday";
+        break;
+    case 6:
+       fruitfruit = "Saturday";
+        break;
+    default:
+        fruit = "Unknown Day";
+}
 
 /*
  * 7. var studentScores = [50, 67, 80, 90, 100, 30, 88, 68]; write a program by using studentScores array ,for loop and conditions.
@@ -48,4 +83,9 @@ function () pizza = {
 /*
  * 8. var studentScores = [50, 67, 80, 90, 100, 30, 88, 68]; write a program by using studentScores array , array.forEach and conditions.
  */
- var studentScores = [50, 67, 80, 90, 100, 30, 88, 68]; 
+var studentScores = [50, 67, 80, 90, 100, 30, 88, 68]; 
+  studentScores.forEach(function(element) {
+    console.log(element);
+});
+
+
