@@ -31,8 +31,7 @@ function () pizza = {
   shape: "Circular", 
   pizzaType : function() { return this.type + " " + this.size; } } 
 /*
- *  5. Build a Animal object by using object constructor function, and add at least two method to prototype,
- *     create two animals from it.
+ *  5. Build a Animal object by using object constructor function, and add at least two method to prototype,create two animals from it.
  */
   function Animal(name) {
   this.name = name
