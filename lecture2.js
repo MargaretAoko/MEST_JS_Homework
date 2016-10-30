@@ -99,6 +99,11 @@ addTwoNUmber();
  * store the iife within a variable and call it
  */
 
+(function addTwoNumber (num1, num2) {
+    return num1 + num2;    
+ }
+addTwoNUmber(236,245));
+
 /*
  * 12. you have following objects:
  *     var person1 = {
@@ -116,6 +121,17 @@ addTwoNUmber();
  *    use bind function here to make namer() function to call 'ashwin'
  *    and lars
  */
+var person1 = {
+          name: 'ashwin'
+    };
+
+   var person2 = {
+         name: 'lars'
+    };
+    function namer() {
+         return this.name;
+  }
+
 
 /*
  * 12. you have following object:
@@ -127,9 +143,16 @@ addTwoNUmber();
  *    var count = function() {
  *          console.log(this.x + this.y);
  *    }
- *  a. what is the result when we invoke count()?
+ *  a. what is the result when we invoke count()? 
+ NaN
  *  b. use bind on function expression to make this work.
  */
+ var number = {
+    x: 22, 
+    y: 33}; 
+var count = function() {
+ console.log(this.x + this.y)}; 
+     count.bind(number)();
 
 /*
  * 13. you have following objects:
@@ -149,6 +172,21 @@ addTwoNUmber();
  *
  *  use call methods on function expression to make this work.
  */
+var person1 = {
+	firstName: 'ashwin',
+	lastName: 'Yaw'
+};
+
+var person2 = {
+	firstName: 'lars',
+	lastName: 'Mike'
+};
+function hello(greeting) {
+	console.log(greeting + ' ' + this.firstName + ' ' + this.lastName);
+}
+
+hello.call(person1, "Hi");
+hello.call(person2, "Hi");
 
 /*
  * 14. We have a following string:
@@ -156,7 +194,6 @@ addTwoNUmber();
  *
  *     please write a function to change the first letter of every word to upper case.
  */
-var str = 'Training, mentoring, and investing in world-class tech entrepreneurs in Africa.'
 function titleCase(str) {  
   str = str.toLowerCase().split(' ');
 
@@ -167,6 +204,6 @@ function titleCase(str) {
   }
   return str.join(' ');
 }
-titleCase("I'm a little tea pot");
+titleCase("Training, mentoring, and investing in world-class tech entrepreneurs in Africa.");
 
 Contact GitHub 
