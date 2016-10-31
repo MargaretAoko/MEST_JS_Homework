@@ -46,3 +46,5 @@
  * 4. what is localStorage and sessionStorge under window object? What is the
  *    difference
  */
+In local storage changes made are saved and available for all current and future visits to the site. 
+But session storage Changes made are saved and available for the current page, as well as future visits to the site on the same window. Once the window is closed, the storage is deleted.
