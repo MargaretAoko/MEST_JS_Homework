@@ -35,6 +35,18 @@
  *        input2 = 'today is Sunday';
  *        output2 = 'Today is Sunday';
  */
+function titleCase(str) {  
+  str = str.toLowerCase().split(' ');
+
+  for(var i = 0; i < str.length; i++){
+    str[i] = str[i].split('');
+    str[i][0] = str[i][0].toUpperCase(); 
+    str[i] = str[i].join('');
+  }
+  return str.join(' ');
+}
+titleCase("hi, welcome to mest");
+
 
 /*
  *  3. Write reg expresion for email validation(This is not an easy
